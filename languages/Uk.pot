@@ -1,0 +1,422 @@
+# Copyright (C) 2021 Alex L
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Coma 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/coma\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-09-21T11:39:03+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: coma\n"
+
+#. Theme Name of the theme
+#: includes/WPBakery/Articles.php:104
+#: includes/WPBakery/BrandsLogo.php:75
+#: includes/WPBakery/CallToActionBlock.php:60
+#: includes/WPBakery/Slider.php:78
+#: includes/WPBakery/Social.php:66
+msgid "Coma"
+msgstr ""
+
+#. Theme URI of the theme
+#. Author URI of the theme
+msgid "https://i-wp-dev.com/"
+msgstr ""
+
+#. Description of the theme
+msgid "WooCommerce themes to Coma.org.ua"
+msgstr ""
+
+#. Author of the theme
+msgid "Alex L"
+msgstr ""
+
+#: 404.php:25
+msgid "Упс! Схоже ми заблукали..."
+msgstr ""
+
+#: 404.php:27
+msgid "На головну"
+msgstr ""
+
+#: 404.php:29
+msgid "До каталогу"
+msgstr ""
+
+#: footer.php:66
+msgid "Ми у соц. мережах"
+msgstr ""
+
+#: header.php:103
+msgid "Отримати онлайн консультацiю"
+msgstr ""
+
+#: header.php:108
+msgid "Записатися на прийом"
+msgstr ""
+
+#: header.php:116
+msgid "Кошик"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:47
+msgid "Основні налаштування"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:55
+msgid "Контактні дані"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:88
+msgid "Логотип"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:99
+msgid "Білий логотип"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:119
+msgid "Копірайт"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:142
+msgid "Графік роботи"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:160
+msgid "Телефон 1"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:176
+msgid "Телефон 2"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:194
+#: includes/Customize/CustomizeTheme.php:210
+msgid "Facebook"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:226
+msgid "Twitter"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:244
+msgid "Текст"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:260
+msgid "Текст кнопки консультація"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:276
+msgid "URL кнопки консультація"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:292
+msgid "Текст кнопки записатися на прийом"
+msgstr ""
+
+#: includes/Customize/CustomizeTheme.php:308
+msgid "URL кнопки записатися на прийом"
+msgstr ""
+
+#: includes/Init/InitThemes.php:176
+msgid "Меню в шапці біля лого"
+msgstr ""
+
+#: includes/Init/InitThemes.php:177
+msgid "Меню в шапці"
+msgstr ""
+
+#: includes/Init/InitThemes.php:178
+msgid "Меню в підвалі перша колонка"
+msgstr ""
+
+#: includes/Init/InitThemes.php:179
+msgid "Меню в підвалі друга колонка"
+msgstr ""
+
+#: includes/Init/InitThemes.php:203
+msgid "Блог і категорії"
+msgstr ""
+
+#: includes/Init/InitThemes.php:214
+msgid "Блог внутрішня"
+msgstr ""
+
+#: includes/Init/InitThemes.php:225
+msgid "Сторінка товарів"
+msgstr ""
+
+#: includes/MetaBox/MetaBoxPageSettings.php:32
+msgid "Налаштування сторінки"
+msgstr ""
+
+#: includes/MetaBox/MetaBoxPageSettings.php:60
+msgid "Відключити назву сторінки"
+msgstr ""
+
+#: includes/MetaBox/MetaBoxPageSettings.php:67
+msgid "Включити назву сторінки"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:26
+msgid "Цей віджет виводить товар у вигляді банера"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:28
+msgid "Нові товари"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:48
+#: includes/WPBakery/Slider.php:51
+msgid "Детальнiше"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:67
+#: includes/WPBakery/Articles.php:110
+#: includes/WPBakery/Social.php:72
+msgid "Заголовок"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:74
+msgid "Ідентифікатор товару"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:82
+msgid "Текст заголовка"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:90
+msgid "Текст кнопки"
+msgstr ""
+
+#: includes/Widget/NewProduct/NewProductWidget.php:97
+msgid "Банер (зображення)"
+msgstr ""
+
+#: includes/Woocommerce/WoocommerceInit.php:89
+msgid "Шорткод не найден"
+msgstr ""
+
+#: includes/Woocommerce/WoocommerceInit.php:114
+msgid "В наявностi"
+msgstr ""
+
+#: includes/Woocommerce/WoocommerceInit.php:116
+msgid "В дорозi"
+msgstr ""
+
+#: includes/Woocommerce/WoocommerceInit.php:149
+msgid "Iнформацiя о товарi"
+msgstr ""
+
+#: includes/Woocommerce/WoocommerceInit.php:150
+msgid "Характеристики"
+msgstr ""
+
+#: includes/Woocommerce/WoocommerceInit.php:153
+msgid "Доставка та термiни повернення"
+msgstr ""
+
+#: includes/WPBakery/Articles.php:85
+msgid "Статей, не знайдено"
+msgstr ""
+
+#: includes/WPBakery/Articles.php:101
+#: includes/WPBakery/Articles.php:102
+msgid "Cтатті"
+msgstr ""
+
+#: includes/WPBakery/Articles.php:121
+msgid "Кількість виведених статей"
+msgstr ""
+
+#: includes/WPBakery/Articles.php:128
+#: includes/WPBakery/BrandsLogo.php:104
+#: includes/WPBakery/CallToActionBlock.php:96
+#: includes/WPBakery/Slider.php:113
+#: includes/WPBakery/Social.php:104
+msgid "CSS box"
+msgstr ""
+
+#: includes/WPBakery/Articles.php:130
+#: includes/WPBakery/BrandsLogo.php:106
+#: includes/WPBakery/CallToActionBlock.php:98
+#: includes/WPBakery/Slider.php:115
+#: includes/WPBakery/Social.php:106
+msgid "Design Options"
+msgstr ""
+
+#: includes/WPBakery/BrandsLogo.php:72
+#: includes/WPBakery/BrandsLogo.php:73
+msgid "Логотипи брендів"
+msgstr ""
+
+#: includes/WPBakery/BrandsLogo.php:81
+msgid "Бренди"
+msgstr ""
+
+#: includes/WPBakery/BrandsLogo.php:88
+#: includes/WPBakery/Slider.php:103
+msgid "Банер (картинка)"
+msgstr ""
+
+#: includes/WPBakery/BrandsLogo.php:94
+msgid "Посилання на бренд"
+msgstr ""
+
+#: includes/WPBakery/CallToActionBlock.php:57
+#: includes/WPBakery/CallToActionBlock.php:58
+msgid "Блок консультації"
+msgstr ""
+
+#: includes/WPBakery/CallToActionBlock.php:67
+msgid "Зоголовок"
+msgstr ""
+
+#: includes/WPBakery/CallToActionBlock.php:73
+msgid "Текст першої кнопки"
+msgstr ""
+
+#: includes/WPBakery/CallToActionBlock.php:79
+msgid "URL першої кнопки"
+msgstr ""
+
+#: includes/WPBakery/CallToActionBlock.php:85
+msgid "Текст другої кнопки"
+msgstr ""
+
+#: includes/WPBakery/CallToActionBlock.php:91
+msgid "URL другої кнопки"
+msgstr ""
+
+#: includes/WPBakery/Slider.php:75
+#: includes/WPBakery/Slider.php:76
+msgid "Слайдер товарів"
+msgstr ""
+
+#: includes/WPBakery/Slider.php:84
+msgid "Слайди"
+msgstr ""
+
+#: includes/WPBakery/Slider.php:91
+msgid "ID товару"
+msgstr ""
+
+#: includes/WPBakery/Slider.php:97
+msgid "Лейбл товару"
+msgstr ""
+
+#: includes/WPBakery/Social.php:63
+#: includes/WPBakery/Social.php:64
+#: includes/WPBakery/Social.php:81
+msgid "Соцiальнi мережi"
+msgstr ""
+
+#: includes/WPBakery/Social.php:88
+msgid "Назва"
+msgstr ""
+
+#: includes/WPBakery/Social.php:94
+msgid "URL"
+msgstr ""
+
+#: index.php:26
+msgid "Категорії"
+msgstr ""
+
+#: index.php:77
+msgid "<span class=\"meta-nav\">&larr;</span> Старіші пости"
+msgstr ""
+
+#: index.php:82
+msgid "Новіші пости <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: single.php:67
+msgid "Iншi cтаттi"
+msgstr ""
+
+#: woocommerce/archive-product.php:79
+msgid "Фiльтри"
+msgstr ""
+
+#: woocommerce/archive-product.php:81
+msgid "Тип товару"
+msgstr ""
+
+#: woocommerce/archive-product.php:105
+msgid "Цiна"
+msgstr ""
+
+#: woocommerce/archive-product.php:108
+msgid "Вiд"
+msgstr ""
+
+#: woocommerce/archive-product.php:117
+msgid "до"
+msgstr ""
+
+#: woocommerce/archive-product.php:126
+msgid "Наявнiсть"
+msgstr ""
+
+#: woocommerce/archive-product.php:139
+msgid "В наявності"
+msgstr ""
+
+#: woocommerce/archive-product.php:152
+msgid "Передзамовлення"
+msgstr ""
+
+#: woocommerce/archive-product.php:154
+msgid "Акційний товар"
+msgstr ""
+
+#: woocommerce/archive-product.php:167
+msgid "Зi знижкою"
+msgstr ""
+
+#: woocommerce/archive-product.php:169
+msgid "Бренд"
+msgstr ""
+
+#: woocommerce/cart/cart.php:150
+#: woocommerce/cart/cart.php:154
+msgid "Номер дисконтної картки"
+msgstr ""
+
+#: woocommerce/cart/cart.php:157
+#: woocommerce/checkout/form-coupon.php:40
+msgid "Застосувати дисконт"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:26
+msgid "Ви можете ввести номер дисконтної картки перейшовши за посиланням"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:26
+msgid "Ввести номер дисконтної картки"
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:31
+msgid "Якщо у вас є дисконтна карта, застосуєте його нижче."
+msgstr ""
+
+#: woocommerce/checkout/form-coupon.php:35
+msgid "Номер картки"
+msgstr ""
+
+#: woocommerce/single-product/related.php:26
+msgid "Схожi товари"
+msgstr ""
+
+#: woocommerce/single-product/related.php:47
+msgid "Бiльше товарiв"
+msgstr ""
