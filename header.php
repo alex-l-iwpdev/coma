@@ -30,10 +30,10 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google-site-verification" content="9L7IdPf6N6jr5islyNb2Ql-IXYEZXCg29D-UYuwRIL8"/>
-	<meta name="google-site-verification" content="gNVJlKNwMDsJhz9flUFmSKZWqoxI3Va7nvZMU5OZte8" />
 	<title><?php bloginfo( 'name' ); ?> | <?php bloginfo( 'description' ); ?></title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
 	<?php wp_head(); ?>
 	<!-- Meta Pixel Code -->
 	<script>
@@ -73,18 +73,20 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 	<div class="top-header">
 		<div class="container">
 			<div class="row justify-content-space-between align-items-center">
-				<?php if ( $scheduleWork ) : ?>
-					<div class="col">
-						<p><?php echo esc_html( $scheduleWork ); ?></p>
-					</div>
-				<?php endif; ?>
+				<div class="col">
+					<a href="<?php echo esc_url( $appointmentUrl ); ?>" class="btn">
+						<?php printf( '%s <strong>%s</strong>', esc_html__( 'Завантажуй наш додатока', 'coma' ), esc_html__( 'отримай -15%', 'coma' ) ); ?>
+					</a>
+				</div>
 				<div class="col">
 					<ul>
-						<li><a
+						<li>
+							<a
 									rel="noindex, nofollow"
 									href="tel:<?php echo esc_html( apply_filters( 'sanitize_phone_number', $phoneOne ) ); ?>"><?php echo esc_html( $phoneOne ); ?></a>
 						</li>
-						<li><a
+						<li>
+							<a
 									rel="noindex, nofollow"
 									href="tel:<?php echo esc_html( apply_filters( 'sanitize_phone_number', $phoneTwo ) ); ?>"><?php echo esc_html( $phoneTwo ); ?></a>
 						</li>
@@ -135,29 +137,29 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 			<div class="col-5">
 				<div class="row align-items-center">
 					<div class="col">
-						<ul class="menu">
+						<a href="#" class="button">
+							<?php esc_attr_e( 'Запис на прийом', 'coma' ); ?>
+						</a>
+					</div>
+					<div class="col-auto">
+						<ul class="menu-icons">
 							<li>
-								<a href="<?php echo esc_url( $adviceUrl ); ?>">
-									<?php echo esc_html( $adviceTetx ); ?>
-								</a>
+								<a href="#" class="icon-search"></a>
 							</li>
 							<li>
-								<a href="<?php echo esc_url( $appointmentUrl ); ?>">
-									<?php echo esc_html( $appointmenttext ); ?>
+								<a href="#" class="icon-user"></a>
+							</li>
+							<li>
+								<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
+								<a class="icon-bag" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
+									<p
+											id="mini-cart-count"
+											style="display: <?php echo ! empty( $items_count ) ? 'block' : 'none'; ?>">
+										<?php echo $items_count ? esc_html( $items_count ) : ''; ?>
+									</p>
 								</a>
 							</li>
 						</ul>
-					</div>
-					<div class="col-auto">
-						<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
-						<a class="icon-bag" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
-							<?php esc_html_e( 'Кошик', 'coma' ); ?>
-							<p
-									id="mini-cart-count"
-									style="display: <?php echo ! empty( $items_count ) ? 'block' : 'none'; ?>">
-								<?php echo $items_count ? esc_html( $items_count ) : ''; ?>
-							</p>
-						</a>
 					</div>
 				</div>
 			</div>

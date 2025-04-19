@@ -30,5 +30,8 @@
     "platform": {
       "php": "8.0"
     }
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs --colors --standard=phpcs.xml"
   }
 }
