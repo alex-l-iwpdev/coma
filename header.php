@@ -143,11 +143,15 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 					</div>
 					<div class="col-auto">
 						<ul class="menu-icons">
+							<!--							<li>-->
+							<!--								<a href="#" class="icon-search">-->
+							<!---->
+							<!--								</a>-->
+							<!--							</li>-->
 							<li>
-								<a href="#" class="icon-search"></a>
-							</li>
-							<li>
-								<a href="#" class="icon-user"></a>
+								<a
+										href="<?php echo esc_url( esc_url( wc_get_page_permalink( 'myaccount' ) ) ); ?>"
+										class="icon-user"></a>
 							</li>
 							<li>
 								<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
