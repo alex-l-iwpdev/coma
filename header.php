@@ -137,8 +137,8 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 			<div class="col-5">
 				<div class="row align-items-center">
 					<div class="col">
-						<a href="#" class="button">
-							<?php esc_attr_e( 'Запис на прийом', 'coma' ); ?>
+						<a href="<?php echo esc_html( $adviceUrl ); ?>" class="button">
+							<?php echo esc_html( $adviceTetx ); ?>
 						</a>
 					</div>
 					<div class="col-auto">
