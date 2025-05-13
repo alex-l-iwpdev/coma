@@ -75,7 +75,7 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 			<div class="row justify-content-space-between align-items-center">
 				<div class="col">
 					<a href="<?php echo esc_url( $appointmentUrl ); ?>" class="btn">
-						<?php printf( '%s <strong>%s</strong>', esc_html__( 'Завантажуй наш додатока', 'coma' ), esc_html__( 'отримай -15%', 'coma' ) ); ?>
+						<?php printf( '%s <strong>%s</strong>', esc_html__( 'Завантажуй наш додатока  ', 'coma' ), esc_html__( ' отримай -15%', 'coma' ) ); ?>
 					</a>
 				</div>
 				<div class="col">
@@ -100,13 +100,6 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 							<li class="icon-twitter"><a href="<?php echo esc_url( $twitter ); ?>"></a></li>
 						<?php endif; ?>
 					</ul>
-				</div>
-				<div class="col col-auto">
-					<div id="languages-switcher">
-						<?php
-						do_action( 'custom_switcher' );
-						?>
-					</div>
 				</div>
 			</div>
 		</div>

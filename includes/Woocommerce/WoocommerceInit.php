@@ -12,6 +12,7 @@
 namespace IWP\Woocommerce;
 
 use IWP\Helpers\WooCommerceFilter;
+use WP_Query;
 
 /**
  * WoocommerceInit Class.
@@ -53,7 +54,6 @@ class WoocommerceInit {
 		add_filter( 'woocommerce_product_tabs', [ $this, 'renameTabs' ], 98 );
 		add_filter( 'woocommerce_add_to_cart_fragments', [ $this, 'refreshCartCount' ] );
 
-		add_action( 'woocommerce_action_block', [ $this, 'addActionBlock' ], 10 );
 		add_action( 'woocommerce_seo_block', [ $this, 'addSeoBlock' ], 10, 1 );
 		add_action( 'woocommerce_before_shop_loop_item', [ $this, 'changeClassProductLinkOpen' ], 10 );
 		add_action( 'woocommerce_after_shop_loop_item_title', [ $this, 'stockQuantity' ], 5 );
@@ -171,11 +171,11 @@ class WoocommerceInit {
 	/**
 	 * Update Main query product from filter.
 	 *
-	 * @param \WP_Query $query Main Query.
+	 * @param WP_Query $query Main Query.
 	 *
-	 * @return \WP_Query
+	 * @return WP_Query
 	 */
-	public function addQueryFilter( \WP_Query $query ): \WP_Query {
+	public function addQueryFilter( WP_Query $query ): WP_Query {
 
 		if (
 			! is_admin() && $query->is_main_query() &&
@@ -284,7 +284,7 @@ class WoocommerceInit {
 	public function getTags(): void {
 		global $product;
 		$prodID = $product->get_id();
-		$tags   = wp_get_post_terms( $prodID, 'product_tag', );
+		$tags   = wp_get_post_terms( $prodID, 'product_tag' );
 		if ( ! empty( $tags ) ) :
 			?>
 			<ul class="prod-tags">
