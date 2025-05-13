@@ -17,7 +17,11 @@ jQuery( document ).ready( function( $ ) {
 	}
 
 	if ( $( 'body:not(.woocommerce-checkout) select' ).length ) {
-		$( 'select:not(#rating)' ).select2();
+		$( 'select:not(#rating)' ).select2({
+			minimumResultsForSearch: Infinity,
+			dropdownParent: '.select',
+			width: '100%',
+		});
 	}
 
 	/**

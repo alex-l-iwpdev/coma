@@ -180,23 +180,21 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 			</div>
 		</div>
 	</div>
-	<?php if ( is_front_page() ) { ?>
-		<div class="container">
-			<div class="row">
-				<div class="col-12">
-					<?php
-					if ( has_nav_menu( 'header_menu_home_page' ) ) {
-						wp_nav_menu(
-							[
-								'theme_location' => 'header_menu_home_page',
-								'menu_class'     => 'menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							]
-						);
-					}
-					?>
-				</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<?php
+				if ( has_nav_menu( 'header_menu_home_page' ) ) {
+					wp_nav_menu(
+						[
+							'theme_location' => 'header_menu_home_page',
+							'menu_class'     => 'menu',
+							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						]
+					);
+				}
+				?>
 			</div>
 		</div>
-	<?php } ?>
+	</div>
 </header>
