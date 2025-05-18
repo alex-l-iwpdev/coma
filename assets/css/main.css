@@ -5287,7 +5287,7 @@ header .button{
 	border-color: #4FBD1B !important;
 }
 header .button:not(.transparent):hover{
-	background: #47A819 !important; 
+	background: #47A819 !important;
 	border-color: #47A819 !important;
 }
 header .icon-bag:hover {
@@ -5315,6 +5315,7 @@ header .top-header .btn{
 }
 header .top-header .btn strong{
 	font-weight: 700;
+	margin-left: 5px;
 }
 header .menu-icons{
 	display: flex;
@@ -5643,7 +5644,7 @@ body:not(.home) .articles .item img {
 	transition: all .3s ease
 }
 .articles .item h3.title {
-	
+
 	font-weight: 500;
 	font-size: 14px;
 	text-transform: uppercase;
@@ -7924,7 +7925,7 @@ footer .copyright a:hover {
 	text-decoration: none;
 	transition: all 0.3s ease;
 	font-size: 18px;
-	
+
 }
 .header-phone a{
 	font-size: 14px;
@@ -8521,15 +8522,15 @@ footer .copyright a:hover {
 		-ms-flex-order: -1;
 		order: -1;
 	}
-	
-	.button, 
+
+	.button,
 	.vc_btn3{
 		font-size: 13px !important;
 	}
 	header .button {
 		font-size: 11px !important;
 	}
-	
+
 }
 @media only screen and (max-width: 767px) {
 	.woocommerce-page table.shop_table_responsive tr td:before,
@@ -9052,7 +9053,7 @@ footer .copyright a:hover {
 		padding-bottom: 5px;
 		height: auto;
 	}
-	
+
 }
 @media only screen and (max-width: 400px) {
 	.variations_form .variations .value {
