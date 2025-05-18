@@ -157,7 +157,7 @@ class CustomizeTheme {
 			'coma_phone_one',
 			[
 				'section' => 'info',
-				'label'   => __( 'Телефон 1', 'coma' ),
+				'label'   => __( 'Viber', 'coma' ),
 				'type'    => 'text',
 			]
 		);
@@ -173,7 +173,7 @@ class CustomizeTheme {
 			'coma_phone_two',
 			[
 				'section' => 'info',
-				'label'   => __( 'Телефон 2', 'coma' ),
+				'label'   => __( 'Telegram', 'coma' ),
 				'type'    => 'text',
 			]
 		);
