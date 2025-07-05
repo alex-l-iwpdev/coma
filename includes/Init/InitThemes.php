@@ -30,7 +30,7 @@ use IWP\WPBakery\StaticBanner;
  */
 class InitThemes {
 
-	const COMA_VERSION = '1.2.3';
+	const COMA_VERSION = '1.2.4';
 
 	/**
 	 * Constructor InitThemes class.

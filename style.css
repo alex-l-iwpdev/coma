@@ -5,7 +5,7 @@ Author: Alex L
 Author URI: https://i-wp-dev.com/
 Description: WooCommerce themes to Coma.org.ua
 Requires PHP: 7.1
-Version: 1.2.0
+Version: 1.2.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: coma
@@ -19,6 +19,7 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 
 .value .select2 {
 	margin-left: 8px;
+	margin-top: 30px;
 }
 
 .no-active {
@@ -436,6 +437,14 @@ h3#comments {
 
 .woocommerce .star-rating span {
 	margin-top: 0 !important;
+}
+
+.select2-container .select2-selection--single {
+	height: auto !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	top: 10px !important;
 }
 
 @media only screen and (max-width: 1429px) {
