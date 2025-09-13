@@ -98,7 +98,7 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 			<div class="row justify-content-space-between align-items-center">
 				<div class="col">
 					<a href="<?php echo esc_url( $appointmentUrl ); ?>" class="btn">
-						<?php printf( '%s <strong> %s </strong>', esc_html__( 'Завантажуй наш додаток  ', 'coma' ), esc_html__( ' i отримай -15%', 'coma' ) ); ?>
+						<?php printf( '%s <strong> %s </strong>', esc_html__( 'Завантажуй наш додаток  ', 'coma' ), esc_html__( ' i отримай -5%', 'coma' ) ); ?>
 					</a>
 				</div>
 				<div class="col">

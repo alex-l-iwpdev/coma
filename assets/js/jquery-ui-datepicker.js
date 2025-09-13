@@ -642,9 +642,9 @@ $.extend( Datepicker.prototype, {
 	_changeDatepicker: function( target, name, value ) {
 		this._optionDatepicker( target, name, value );
 		setTimeout(function(){
-			
+
 		},500)
-		
+
 	},
 
 	/* Redraw the date picker attached to an input field or division.
@@ -2105,10 +2105,10 @@ $.extend( Datepicker.prototype, {
 		setTimeout(function(){
 			$('.ui-datepicker-month').select2({
 				minimumResultsForSearch: Infinity,
-				dropdownParent: '.ui-datepicker-title',
+				dropdownParent: $('.ui-datepicker-title'),
 			});
 		},50)
-		
+
 	},
 
 	/* Determine the number of months to show. */
@@ -2142,7 +2142,7 @@ $.extend( Datepicker.prototype, {
 			date.setDate( this._getDaysInMonth( date.getFullYear(), date.getMonth() ) );
 		}
 		return this._isInRange( inst, date );
-		
+
 	},
 
 	/* Is the given date in the accepted range? */
