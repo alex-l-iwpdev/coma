@@ -58,22 +58,22 @@ $coordinate = json_decode( $coordinate );
 						foreach ( $problems as $key => $problem ) {
 							$problem_type_term = get_term_by( 'id', $problem['product_type'], 'product-type' );
 							$args              = [
-								'post_type'      => 'product',
-								'post_status'    => 'publish',
-								'posts_per_page' => 10,
-								'tax_query'      => [
-									'relation' => 'AND',
-									[
-										'taxonomy' => 'product-type',
-										'field'    => 'id',
-										'terms'    => $problem_type_term->term_id,
+									'post_type'      => 'product',
+									'post_status'    => 'publish',
+									'posts_per_page' => 10,
+									'tax_query'      => [
+											'relation' => 'AND',
+											[
+													'taxonomy' => 'product-type',
+													'field'    => 'id',
+													'terms'    => $problem_type_term->term_id,
+											],
+											[
+													'taxonomy' => 'problems-tag',
+													'field'    => 'id',
+													'terms'    => $problem['problem'],
+											],
 									],
-									[
-										'taxonomy' => 'problems-tag',
-										'field'    => 'id',
-										'terms'    => $problem['problem'],
-									],
-								],
 							];
 
 							$product_query = new WP_Query( $args );
@@ -85,10 +85,20 @@ $coordinate = json_decode( $coordinate );
 								<?php if ( $product_query->have_posts() ) { ?>
 									<div class="product-items">
 										<?php
+										$index = 1;
 										while ( $product_query->have_posts() ) {
 											$product_query->the_post();
 											$product_id = get_the_ID();
-											get_template_part( 'template/product', 'item', [ 'product_id' => $product_id ] );
+											get_template_part(
+													'template/product',
+													'item',
+													[
+															'product_id' => $product_id,
+															'index'      => $index,
+															'list_name'  => $atts['sub_title'],
+													]
+											);
+											$index ++;
 										}
 										wp_reset_postdata();
 										?>
