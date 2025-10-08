@@ -20,6 +20,7 @@ use IWP\Woocommerce\WoocommerceInit;
 use IWP\WPBakery\Articles;
 use IWP\WPBakery\BrandsLogo;
 use IWP\WPBakery\CallToActionBlock;
+use IWP\WPBakery\HeroSlider;
 use IWP\WPBakery\Problems;
 use IWP\WPBakery\Slider;
 use IWP\WPBakery\Social;
@@ -45,15 +46,15 @@ class InitThemes {
 	public function url_rewrite_rules(): void {
 
 		add_rewrite_rule(
-			'shop/filter/([-_a-zA-Z0-9+%.:]+)/page/(\d+)/?$',
-			'index.php?post_type=product&filter=$matches[1]&paged=$matches[2]',
-			'top'
+				'shop/filter/([-_a-zA-Z0-9+%.:]+)/page/(\d+)/?$',
+				'index.php?post_type=product&filter=$matches[1]&paged=$matches[2]',
+				'top'
 		);
 
 		add_rewrite_rule(
-			'shop/filter/([-_a-zA-Z0-9+%.:]+)/?$',
-			'index.php?post_type=product&filter=$matches[1]',
-			'top'
+				'shop/filter/([-_a-zA-Z0-9+%.:]+)/?$',
+				'index.php?post_type=product&filter=$matches[1]',
+				'top'
 		);
 	}
 
@@ -115,65 +116,57 @@ class InitThemes {
 
 		// JS.
 		wp_enqueue_script(
-			'build',
-			$url . '/assets/js/build.js',
-			[
-				'jquery',
-				'fancybox',
-				'bootstrap',
-				'slick',
-			],
-			self::COMA_VERSION,
-			true
+				'build',
+				$url . '/assets/js/build.js',
+				[
+						'jquery',
+						'fancybox',
+						'bootstrap',
+						'slick',
+				],
+				self::COMA_VERSION,
+				true
 		);
 		wp_enqueue_script( 'fancybox', $url . '/assets/js/jquery.fancybox.min.js', [ 'jquery' ], self::COMA_VERSION, true );
 		wp_enqueue_script( 'IncrementBox', $url . '/assets/js/jquery.IncrementBox.js', [ 'jquery' ], self::COMA_VERSION, true );
 		wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', [ 'jquery' ], '1.8.1', true );
 		wp_enqueue_script(
-			'bootstrap',
-			'//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"',
-			[ 'jquery' ],
-			'5.0.2',
-			true
+				'bootstrap',
+				'//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"',
+				[ 'jquery' ],
+				'5.0.2',
+				true
 		);
 		wp_enqueue_script(
-			'main',
-			$url . '/assets/js/main.js',
-			[ 'jquery', 'select' ],
-			self::COMA_VERSION,
-			true
+				'main',
+				$url . '/assets/js/main.js',
+				[ 'jquery', 'select' ],
+				self::COMA_VERSION,
+				true
+		);
+
+		wp_enqueue_script(
+				'select',
+				$url . '/assets/js/select2.min.js',
+				[ 'jquery' ],
+				self::COMA_VERSION,
+				true
 		);
 
 		wp_enqueue_script(
-			'select',
-			$url . '/assets/js/select2.min.js',
-			[ 'jquery' ],
-			self::COMA_VERSION,
-			true
-		);
-
-//        wp_enqueue_script(
-//			'hcSticky',
-//			$url . '/assets/js/hcSticky.js',
-//			[ 'jquery' ],
-//			self::COMA_VERSION,
-//			true
-//		);
-
-		wp_enqueue_script(
-			'com-tab',
-			$url . '/assets/js/tab.min.js',
-			[ 'jquery' ],
-			self::COMA_VERSION,
-			true
+				'com-tab',
+				$url . '/assets/js/tab.min.js',
+				[ 'jquery' ],
+				self::COMA_VERSION,
+				true
 		);
 
 		wp_localize_script(
-			'main',
-			'coma',
-			[
-				'url' => admin_url( 'admin-ajax.php' ),
-			]
+				'main',
+				'coma',
+				[
+						'url' => admin_url( 'admin-ajax.php' ),
+				]
 		);
 
 		// CSS.
@@ -220,13 +213,13 @@ class InitThemes {
 
 		// Add Menu Area Supports.
 		register_nav_menus(
-			[
-				'top_bar_header_menu'       => __( 'Меню в шапці біля лого', 'coma' ),
-				'header_menu'               => __( 'Меню в шапці', 'coma' ),
-				'header_menu_home_page'     => __( 'Меню в шапці на головній сторінці', 'coma' ),
-				'footer_menu_first_column'  => __( 'Меню в підвалі перша колонка', 'coma' ),
-				'footer_menu_second_column' => __( 'Меню в підвалі друга колонка', 'coma' ),
-			]
+				[
+						'top_bar_header_menu'       => __( 'Меню в шапці біля лого', 'coma' ),
+						'header_menu'               => __( 'Меню в шапці', 'coma' ),
+						'header_menu_home_page'     => __( 'Меню в шапці на головній сторінці', 'coma' ),
+						'footer_menu_first_column'  => __( 'Меню в підвалі перша колонка', 'coma' ),
+						'footer_menu_second_column' => __( 'Меню в підвалі друга колонка', 'coma' ),
+				]
 		);
 
 		// Register Image Size.
@@ -253,36 +246,36 @@ class InitThemes {
 
 		// Register widget zone.
 		register_sidebar(
-			[
-				'name'          => __( 'Блог і категорії', 'coma' ),
-				'id'            => 'blog-sidebar',
-				'before_widget' => '<div>',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3>',
-				'after_title'   => '</h3>',
-			]
+				[
+						'name'          => __( 'Блог і категорії', 'coma' ),
+						'id'            => 'blog-sidebar',
+						'before_widget' => '<div>',
+						'after_widget'  => '</div>',
+						'before_title'  => '<h3>',
+						'after_title'   => '</h3>',
+				]
 		);
 
 		register_sidebar(
-			[
-				'name'          => __( 'Блог внутрішня', 'coma' ),
-				'id'            => 'blog-inside-sidebar',
-				'before_widget' => '<div>',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3>',
-				'after_title'   => '</h3>',
-			]
+				[
+						'name'          => __( 'Блог внутрішня', 'coma' ),
+						'id'            => 'blog-inside-sidebar',
+						'before_widget' => '<div>',
+						'after_widget'  => '</div>',
+						'before_title'  => '<h3>',
+						'after_title'   => '</h3>',
+				]
 		);
 
 		register_sidebar(
-			[
-				'name'          => __( 'Сторінка товарів', 'coma' ),
-				'id'            => 'products-sidebar',
-				'before_widget' => '<div>',
-				'after_widget'  => '</div>',
-				'before_title'  => '<h3>',
-				'after_title'   => '</h3>',
-			]
+				[
+						'name'          => __( 'Сторінка товарів', 'coma' ),
+						'id'            => 'products-sidebar',
+						'before_widget' => '<div>',
+						'after_widget'  => '</div>',
+						'before_title'  => '<h3>',
+						'after_title'   => '</h3>',
+				]
 		);
 
 		if ( class_exists( NewProductWidget::class ) ) {
@@ -324,19 +317,19 @@ class InitThemes {
 
 		if ( 'vc_column' === $tag || 'vc_column_inner' === $tag ) {
 			$class_string = preg_replace(
-				[
-					'/vc_col-lg-(\d{1,2})/',
-					'/vc_col-md-(\d{1,2})/',
-					'/vc_col-sm-(\d{1,2})/',
-					'/vc_col-xs-(\d{1,2})/',
-				],
-				[
-					'col-lg-$1',
-					'col-md-$1',
-					'col-sm-$1',
-					'col-$1',
-				],
-				$class_string
+					[
+							'/vc_col-lg-(\d{1,2})/',
+							'/vc_col-md-(\d{1,2})/',
+							'/vc_col-sm-(\d{1,2})/',
+							'/vc_col-xs-(\d{1,2})/',
+					],
+					[
+							'col-lg-$1',
+							'col-md-$1',
+							'col-sm-$1',
+							'col-$1',
+					],
+					$class_string
 			);
 			$class_string = str_replace( [ 'vc_column_container', 'wpb_column' ], [ '', '' ], $class_string );
 		}
@@ -355,6 +348,7 @@ class InitThemes {
 		new BrandsLogo();
 		new StaticBanner();
 		new Problems();
+		new HeroSlider();
 	}
 
 	/**
@@ -439,59 +433,59 @@ class InitThemes {
 	 */
 	public function register_problem_tag(): void {
 		register_taxonomy(
-			'problems-tag',
-			[ 'product' ],
-			[
-				'label'        => '',
-				'labels'       => [
-					'name'              => __( 'Проблеми', 'coma' ),
-					'singular_name'     => __( 'Проблеми', 'coma' ),
-					'search_items'      => __( 'Шукати проблему', 'coma' ),
-					'all_items'         => __( 'Усі проблеми', 'coma' ),
-					'view_item '        => __( 'Смотреть проблему', 'coma' ),
-					'parent_item'       => __( 'Батьківська проблема', 'coma' ),
-					'parent_item_colon' => __( 'Батьківська проблема:', 'coma' ),
-					'edit_item'         => __( 'Редагувати проблему', 'coma' ),
-					'update_item'       => __( 'Оновити проблему', 'coma' ),
-					'add_new_item'      => __( 'Створити новий проблему', 'coam' ),
-					'new_item_name'     => __( 'Створити новий проблему', 'coma' ),
-					'menu_name'         => __( 'Проблеми', 'coma' ),
-					'back_to_items'     => __( '← Назад до проблем', 'coma' ),
-				],
-				'description'  => '',
-				'public'       => true,
-				'hierarchical' => true,
-				'rewrite'      => true,
-				'show_in_rest' => true,
-			]
+				'problems-tag',
+				[ 'product' ],
+				[
+						'label'        => '',
+						'labels'       => [
+								'name'              => __( 'Проблеми', 'coma' ),
+								'singular_name'     => __( 'Проблеми', 'coma' ),
+								'search_items'      => __( 'Шукати проблему', 'coma' ),
+								'all_items'         => __( 'Усі проблеми', 'coma' ),
+								'view_item '        => __( 'Смотреть проблему', 'coma' ),
+								'parent_item'       => __( 'Батьківська проблема', 'coma' ),
+								'parent_item_colon' => __( 'Батьківська проблема:', 'coma' ),
+								'edit_item'         => __( 'Редагувати проблему', 'coma' ),
+								'update_item'       => __( 'Оновити проблему', 'coma' ),
+								'add_new_item'      => __( 'Створити новий проблему', 'coam' ),
+								'new_item_name'     => __( 'Створити новий проблему', 'coma' ),
+								'menu_name'         => __( 'Проблеми', 'coma' ),
+								'back_to_items'     => __( '← Назад до проблем', 'coma' ),
+						],
+						'description'  => '',
+						'public'       => true,
+						'hierarchical' => true,
+						'rewrite'      => true,
+						'show_in_rest' => true,
+				]
 		);
 
 		register_taxonomy(
-			'product-type',
-			[ 'product' ],
-			[
-				'label'        => '',
-				'labels'       => [
-					'name'              => __( 'Тип продукту', 'coma' ),
-					'singular_name'     => __( 'Тип продукту', 'coma' ),
-					'search_items'      => __( 'Шукати продукт', 'coma' ),
-					'all_items'         => __( 'Усі продукти', 'coma' ),
-					'view_item '        => __( 'Смотреть продукт', 'coma' ),
-					'parent_item'       => __( 'Батьківський продукт', 'coma' ),
-					'parent_item_colon' => __( 'Батьківський продукт:', 'coma' ),
-					'edit_item'         => __( 'Редагувати продукт', 'coma' ),
-					'update_item'       => __( 'Оновити продукт', 'coma' ),
-					'add_new_item'      => __( 'Створити новий тип продукту', 'coam' ),
-					'new_item_name'     => __( 'Створити новий тип продукту', 'coma' ),
-					'menu_name'         => __( 'Тип продукту', 'coma' ),
-					'back_to_items'     => __( '← Назад до продукту', 'coma' ),
-				],
-				'description'  => '',
-				'public'       => true,
-				'hierarchical' => true,
-				'rewrite'      => true,
-				'show_in_rest' => true,
-			]
+				'product-type',
+				[ 'product' ],
+				[
+						'label'        => '',
+						'labels'       => [
+								'name'              => __( 'Тип продукту', 'coma' ),
+								'singular_name'     => __( 'Тип продукту', 'coma' ),
+								'search_items'      => __( 'Шукати продукт', 'coma' ),
+								'all_items'         => __( 'Усі продукти', 'coma' ),
+								'view_item '        => __( 'Смотреть продукт', 'coma' ),
+								'parent_item'       => __( 'Батьківський продукт', 'coma' ),
+								'parent_item_colon' => __( 'Батьківський продукт:', 'coma' ),
+								'edit_item'         => __( 'Редагувати продукт', 'coma' ),
+								'update_item'       => __( 'Оновити продукт', 'coma' ),
+								'add_new_item'      => __( 'Створити новий тип продукту', 'coam' ),
+								'new_item_name'     => __( 'Створити новий тип продукту', 'coma' ),
+								'menu_name'         => __( 'Тип продукту', 'coma' ),
+								'back_to_items'     => __( '← Назад до продукту', 'coma' ),
+						],
+						'description'  => '',
+						'public'       => true,
+						'hierarchical' => true,
+						'rewrite'      => true,
+						'show_in_rest' => true,
+				]
 		);
 	}
 

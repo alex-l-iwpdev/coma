@@ -607,9 +607,12 @@ jQuery( document ).ready( function( $ ) {
 	/*BANNER SLIDER START*/
 	if ( $( '.banner-slider' ).length ) {
 		$( '.banner-slider' ).slick( {
-			prevArrow: '<i class="icon-left">',
-			nextArrow: '<i class="icon-right">',
-			dots: true
+			// prevArrow: '<i class="icon-left">',
+			// nextArrow: '<i class="icon-right">',
+			dots: true,
+			infinite: true,
+			autoplay: true,
+			autoplaySpeed: 5000,
 		} );
 	}
 	/*BANNER SLIDER END*/
