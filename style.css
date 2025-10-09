@@ -5,7 +5,7 @@ Author: Alex L
 Author URI: https://i-wp-dev.com/
 Description: WooCommerce themes to Coma.org.ua
 Requires PHP: 7.1
-Version: 1.2.4
+Version: 1.2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: coma
@@ -47,6 +47,10 @@ Tags: one-column, flexible-header, accessibility-ready, custom-colors, custom-me
 
 .comment-respond .comment-form-comment {
 	width: 100%;
+}
+
+header {
+	width: 100vw;
 }
 
 .comment-respond .comment-form-author,
@@ -533,10 +537,6 @@ h3#comments {
 	margin-right: -15px;
 }
 
-.banner-slider .mobile {
-	display: none;
-}
-
 .banner-slider img {
 	width: 100%;
 	height: auto;
@@ -558,6 +558,23 @@ h3#comments {
 
 .banner-slider .item {
 	margin: 0 15px;
+	position: relative;
+}
+
+.banner-slider .item .url {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.banner-slider .item .img {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow: hidden;
 }
 
 .banner-slider .slick-dots li {
@@ -575,6 +592,12 @@ h3#comments {
 
 .-no-padding > .col-sm-12 {
 	padding: 0 !important;
+}
+
+@media only screen and (min-width: 1025px) {
+	.home section {
+		padding-top: 238.55px;
+	}
 }
 
 @media only screen and (max-width: 575px) {

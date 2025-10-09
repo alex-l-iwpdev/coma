@@ -34,6 +34,20 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+	<style>
+		.banner-slider .item .img{
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			overflow: hidden;
+		}
+		
+		@media only screen and (min-width: 768px) {
+			.banner-slider .mobile{
+				display: none;
+			}
+		}
+	</style>
 	<?php wp_head(); ?>
 	<!-- Meta Pixel Code -->
 	<script>
@@ -82,7 +96,7 @@ $twitter   = ! empty( get_theme_mod( 'coma_twitter' ) ) ? get_theme_mod( 'coma_t
 			f.parentNode.insertBefore( j, f );
 		} )( window, document, 'script', 'dataLayer', 'GTM-M4F6GLBP' );</script>
 	<!-- End Google Tag Manager -->
-
+	
 </head>
 <body <?php body_class(); ?>>
 <!-- Google Tag Manager (noscript) -->
